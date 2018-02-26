@@ -18,7 +18,7 @@ main:
     changeToLower:
         add $11, $9, $10 # $11 = string[i]
         lb $12, 0($11)    # load single char into $12
-        beq $12, $zero, exit # of we reach end of string exit
+        beq $12, $zero, exit # of we reach end of string memory exit
         add $12, $12, $8  # add 32 to get to lower
         sb $12 ($11) # save changed char back to same memory location
         addi $10, $10, 1 # increase iterator
